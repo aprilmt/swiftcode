@@ -1,0 +1,64 @@
+//
+//  ViewController.swift
+//  test
+//
+//  Created by Te Ma on 4/5/16.
+//  Copyright © 2016 calculator. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var op1TextField:
+    UITextField!
+    
+    @IBOutlet weak var op2TextField:
+    UITextField!
+    
+    @IBOutlet weak var resultLable: UILabel!
+    
+    @IBAction func add(sender: UIButton) {
+        let op1: Int = Int(op1TextField.text!)!
+        let op2: Int = Int(op2TextField.text!)!
+        let result: Int = op1 + op2
+        resultLable.text = "\(result)"
+        
+    }
+    
+    @IBAction func minus(sender: UIButton) {
+        let op1: Int = Int(op1TextField.text!)!
+        let op2: Int = Int(op2TextField.text!)!
+        let result: Int = op1 - op2
+        resultLable.text = "\(result)"
+    }
+    
+    @IBAction func times(sender: UIButton) {
+        let op1: Int = Int(op1TextField.text!)!
+        let op2: Int = Int(op2TextField.text!)!
+        let result: Int = op1 * op2
+        resultLable.text = "\(result)"
+    }
+    
+    @IBAction func chu(sender: UIButton) {
+        let op1: Int = Int(op1TextField.text!)!
+        let op2: Int = Int(op2TextField.text!)!
+        let result: Int = op1 / op2
+        resultLable.text = "\(result)"
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        view.backgroundColor = UIColor.blackColor()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+
+}
+
